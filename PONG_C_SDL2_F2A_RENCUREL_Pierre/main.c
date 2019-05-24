@@ -32,7 +32,7 @@ int main(int argc, char *argv[])    //Fonction main
 
 
         //Create texture for drawing in texture or load picture
-        myGame.g_ptexture=SDL_CreateTexture(myGame.g_pRenderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET,SCREEN_WIDTH,SCREEN_HEIGHT);
+        //myGame.g_ptexture=SDL_CreateTexture(myGame.g_pRenderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET,SCREEN_WIDTH,SCREEN_HEIGHT);
 
 
 
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])    //Fonction main
 
                     printf("1:Lancer le PONG C facile\n");
 
-                    scanf("%i",&choix); //Saisie du choix par le joueur
+                    scanf_s("%i",&choix); //Saisie du choix par le joueur
 
 
                 }
@@ -54,8 +54,8 @@ int main(int argc, char *argv[])    //Fonction main
                         case 1:init("Chapter 1 setting up SDL",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,SCREEN_WIDTH,SCREEN_HEIGHT,SDL_WINDOW_SHOWN,&myGame);
                                 while(state.g_bRunning){    //Appel des procedures et fonctions
 
-                                    handleEvents(&state,&dep,&dep2, &Player1, &Player2);    //Gestion des inputs
-                                    MouvementRaquette (&state,&dep,&dep2 ,&Player1,&Player2 ); //Mouvement des raquettes
+                                    handleEvents(&state,&dep,&dep2, Player1, Player2);    //Gestion des inputs
+                                    MouvementRaquette (&state,&dep,&dep2 ,Player1,Player2 ); //Mouvement des raquettes
                                     MouvBalle(&dep, &dep2, &DefCercle); //Mouvement de la balle et gestion des collisions
                                     renderTexture(&myGame,&dep,&dep2, &DefCercle ); //Tracé des raquettes et de la balle
 

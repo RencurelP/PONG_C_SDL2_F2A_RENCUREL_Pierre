@@ -59,11 +59,11 @@ typedef enum {imo , up , down} direction;   //Différents états des raquettes
 //prototypes
 int init(char *title, int xpos,int ypos,int width, int height,int flags,game *myGame);  //Initialisation de l'affichage
 void destroy(game *myGame); //Destruction de l'instance du jeu
-void handleEvents(gameState *state,coordonnees *dep,coordonnees *dep2, direction *Player1, direction *Player2); //Gestion des inputs
+void handleEvents(gameState *state,coordonnees *dep,coordonnees *dep2, direction Player1, direction Player2); //Gestion des inputs
 void delay(unsigned int frameLimit);    //Gestion du framerate
 
 void renderTexture(game *myGame,coordonnees *dep,coordonnees *dep2, defcircle *DefCercle ); //Affichage du jeu
-void MouvementRaquette (gameState *state,coordonnees *dep,coordonnees *dep2 , direction *Player1, direction *Player2 ); //Gestion indépendante et non bloquante du mouvement des raquettes
+void MouvementRaquette (gameState *state,coordonnees *dep,coordonnees *dep2 , direction Player1, direction Player2 ); //Gestion indépendante et non bloquante du mouvement des raquettes
 void MouvBalle(coordonnees *dep, coordonnees *dep2, defcircle *DefCercle);  //Gestion du mouvement de la balle et de ses collisions
 
 #endif

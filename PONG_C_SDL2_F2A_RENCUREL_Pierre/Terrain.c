@@ -126,7 +126,7 @@ void destroy(game *myGame){
 }
 
 
-void handleEvents(gameState *state,coordonnees *dep,coordonnees *dep2 , direction *Player1, direction *Player2 ){
+void handleEvents(gameState *state,coordonnees *dep,coordonnees *dep2 , direction Player1, direction Player2 ){
 
 
     SDL_Event event;
@@ -140,17 +140,17 @@ void handleEvents(gameState *state,coordonnees *dep,coordonnees *dep2 , directio
                             {
 
                                 case SDLK_UP:   //Utilisation des flèches pour déplacer le joueur 2 (a droite)
-                                                Player2 -> up;
+                                                Player2 = up;
                                                     break;
                                 case SDLK_DOWN:
-                                                Player2 -> down;
+                                                Player2 = down;
                                                     break;
 
                                 case SDLK_z:    //Utilisation de Z et S pour déplacer le joueur 1 (gauche)
-                                                Player1 -> up;
+                                                Player1 = up;
                                                     break;
                                 case SDLK_s:
-                                                Player1 -> down;
+                                                Player1 = down;
                                                     break;
                             }
                             break;
@@ -183,16 +183,16 @@ void handleEvents(gameState *state,coordonnees *dep,coordonnees *dep2 , directio
 
 }
 
-void MouvementRaquette (gameState *state,coordonnees *dep,coordonnees *dep2 , direction *Player1, direction *Player2 ){
+void MouvementRaquette (gameState *state,coordonnees *dep,coordonnees *dep2 , direction Player1, direction Player2 ){
 
-if (Player1 -> up){ //Selon l'état de la raquette cette dernière se déplace de 4 pixels soit vers le haut soir vers le bas
+if (Player1 = up){ //Selon l'état de la raquette cette dernière se déplace de 4 pixels soit vers le haut soir vers le bas
     if (dep->y<0){
         dep->y++;
     }else{
         dep->y-=4;
     }
 }else{
-    if (Player1 -> down){
+    if (Player1 = down){
         if (dep->y>SCREEN_HEIGHT){
             dep->y--;
         }else{
@@ -201,14 +201,14 @@ if (Player1 -> up){ //Selon l'état de la raquette cette dernière se déplace de 4
     }
 }
 
-if (Player2 -> up){
+if (Player2 = up){
     if (dep2->y<0){
         dep2->y++;
     }else{
         dep2->y-=4;
     }
 }else{
-    if (Player2 -> down){
+    if (Player2 = down){
         if (dep2->y>SCREEN_HEIGHT){
             dep2->y--;
         }else{

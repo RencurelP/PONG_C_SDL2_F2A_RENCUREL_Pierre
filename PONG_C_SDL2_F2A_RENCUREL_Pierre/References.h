@@ -5,7 +5,7 @@
 
 #include <stdio.h>  //Inclusion des inputs et outputs standard
 #include <stdlib.h> //Inclusion des librairies standards
-#include <SDL2/SDL.h>   //Inclusion de la SDL2
+#include <SDL.h>   //Inclusion de la SDL2
 #include <SDL2/SDL_ttf.h> //Inclusion de l'extension TTF
 #include <math.h>   //Inclusion de la bibliothèque Math pour effectuer les calculs du tracé de la balle
 

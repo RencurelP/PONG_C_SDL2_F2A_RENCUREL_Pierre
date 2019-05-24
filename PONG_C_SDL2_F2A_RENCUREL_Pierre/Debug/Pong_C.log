@@ -1,0 +1,4 @@
+﻿  main.c
+LINK : warning LNK4044: unrecognized option '/SDL2_ttf-2.0.14/x86_64-w64-mingw32/SDL_ttf.lib'; ignored
+LINK : warning LNK4044: unrecognized option '/SDL2_image-2.0.1/x86_64-w64-mingw32/SDL_image.lib'; ignored
+  Pong_C.vcxproj -> D:\Documents\GitHub\PONG_C_SDL2_F2A_RENCUREL_Pierre\PONG_C_SDL2_F2A_RENCUREL_Pierre\Debug\Pong_C.exe
